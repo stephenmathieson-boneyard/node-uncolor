@@ -16,4 +16,4 @@ exports = module.exports = function uncolor(str) {
  * @api private
  * @type {RegExp}
  */
-exports.expr = /\x1B\[\d+[m|K]/g;
+exports.expr = /\x1B\[\??\d+[mlhABCDEFGK]/g;
