@@ -11,6 +11,10 @@ describe('uncolor()', function () {
     uncolor('\033[31mhello world\033[31m').should.be.equal('hello world');
   });
 
+  it('should handle line removal codes', function () {
+    uncolor('\u001b[2Khello world').should.be.equal('hello world');
+  });
+
   it('should expose its regexp', function () {
     uncolor.expr.should.be.an.instanceof(RegExp);
   });
