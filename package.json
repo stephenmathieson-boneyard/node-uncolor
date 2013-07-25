@@ -1,0 +1,24 @@
+{
+  "name": "uncolor",
+  "version": "0.1.0",
+  "description": "Remove color",
+  "license": "MIT",
+  "keywords": [ "ansi", "color", "uncolor" ],
+  "author": "stephen mathieson <me@stephenmathieson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/node-uncolor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/node-uncolor/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.12.0"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "make test"
+  }
+}
