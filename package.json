@@ -1,6 +1,6 @@
 {
   "name": "uncolor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Remove color",
   "license": "MIT",
   "keywords": [ "ansi", "color", "uncolor" ],
