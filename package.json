@@ -1,7 +1,7 @@
 {
   "name": "uncolor",
   "version": "0.1.1",
-  "description": "Remove color",
+  "description": "Remove ANSI escape codes from stringsr",
   "license": "MIT",
   "keywords": [ "ansi", "color", "uncolor" ],
   "author": "stephen mathieson <me@stephenmathieson.com>",
