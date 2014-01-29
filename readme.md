@@ -1,4 +1,3 @@
-
 # uncolor
 
 Remove ANSI escape codes from strings
@@ -15,7 +14,8 @@ uncolor('\x1B[31mhello world\x1B[39m') === 'hello world'
 
 `npm install uncolor -g`
 
-`echo \x1B[31mhello world\x1B[39m | uncolor`
+`echo '\x1B[31mhello world\x1B[39m' | uncolor`
+
 hello world
 
 
