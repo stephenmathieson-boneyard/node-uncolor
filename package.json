@@ -18,6 +18,9 @@
     "mocha": "~1.12.0"
   },
   "main": "index",
+  "bin": {
+    "uncolor": "bin.js"
+  },
   "scripts": {
     "test": "make test"
   }
