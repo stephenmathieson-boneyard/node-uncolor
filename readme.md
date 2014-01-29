@@ -1,4 +1,3 @@
-
 # uncolor
 
 Remove ANSI escape codes from strings
@@ -10,6 +9,14 @@ var uncolor = require('uncolor')
 
 uncolor('\x1B[31mhello world\x1B[39m') === 'hello world'
 ```
+
+# Bin
+
+`npm install uncolor -g`
+
+`echo '\x1B[31mhello world\x1B[39m' | uncolor`
+
+hello world
 
 
 ## License 
