@@ -1,8 +1,13 @@
+
 # uncolor
 
 Remove ANSI escape codes from strings
 
-# API
+## Installation
+
+    $ npm install uncolor
+
+## API
 
 ```js
 var uncolor = require('uncolor')
@@ -10,20 +15,18 @@ var uncolor = require('uncolor')
 uncolor('\x1B[31mhello world\x1B[39m') === 'hello world'
 ```
 
-# Bin
+## CLI Usage (npm install -g uncolor)
 
-`npm install uncolor -g`
-
-`echo '\x1B[31mhello world\x1B[39m' | uncolor`
-
+```sh
+$ echo -e "\033[1mhello world\033[00m" | uncolor
 hello world
-
+```
 
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2013 stephen mathieson &lt;me@stephenmathieson.com&gt;
+Copyright (c) 2014 stephen mathieson &lt;me@stephenmathieson.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

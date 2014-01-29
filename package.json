@@ -1,10 +1,10 @@
 {
   "name": "uncolor",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Remove ANSI escape codes from stringsr",
   "license": "MIT",
   "keywords": [ "ansi", "color", "uncolor" ],
-  "author": "stephen mathieson <me@stephenmathieson.com>",
+  "author": "Stephen Mathieson <me@stephenmathieson.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/stephenmathieson/node-uncolor.git"

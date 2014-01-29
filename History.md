@@ -1,7 +1,8 @@
 
-# 0.2.0 (unreleased)
+# 0.2.0 
 
 - Add support for cursor movement
+- Add binary: `$ echo -e "\033[1mhello world\033[00m" | uncolor `
 
 # 0.1.1
 
