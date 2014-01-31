@@ -3,6 +3,8 @@
 
   Remove ANSI escape codes from strings, buffers and streams.
 
+[![Build Status](https://travis-ci.org/stephenmathieson/node-uncolor.png?branch=master)](https://travis-ci.org/stephenmathieson/node-uncolor)
+
 ## Installation
 
     $ npm install uncolor
