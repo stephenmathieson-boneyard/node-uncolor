@@ -1,19 +1,40 @@
 
 /**
- * Remove ANSI escape codes from the given `str`
- *
- * @api public
- * @param {String} str
- * @return {String}
+ * Module dependencies.
  */
-exports = module.exports = function uncolor(str) {
-  return str.replace(exports.expr, '');
-};
+
+var Transform = require('stream').Transform
+  || require('readable-stream').Transform;
+
+exports = module.exports = uncolor;
+exports.expr = /\x1B\[\??\d+[mlhABCDEFGK]/g;
 
 /**
- * Expose the regex
+ * Remove ANSI escape codes from the given `str`
+ * or `Readable` stream.
+ *
+ * @api public
+ * @param {String|Readable} [str]
+ * @return {String}
+ */
+
+function uncolor(str) {
+  if (!arguments.length) return transformer();
+  return String(str).replace(exports.expr, '');
+}
+
+/**
+ * Simple Transform stream for removing ANSI stuff
+ * from streams.
  *
  * @api private
- * @type {RegExp}
+ * @return {Transform}
  */
-exports.expr = /\x1B\[\??\d+[mlhABCDEFGK]/g;
+
+function transformer() {
+  var transform = new Transform;
+  transform._transform = function (chunk, encoding, done) {
+    done(null, uncolor(chunk));
+  };
+  return transform;
+}
