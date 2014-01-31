@@ -1,9 +1,13 @@
 {
   "name": "uncolor",
   "version": "0.2.0",
-  "description": "Remove ANSI escape codes from stringsr",
+  "description": "Remove ANSI escape codes from strings, buffers and streams",
   "license": "MIT",
-  "keywords": [ "ansi", "color", "uncolor" ],
+  "keywords": [
+    "ansi",
+    "color",
+    "uncolor"
+  ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
   "repository": {
     "type": "git",
@@ -12,7 +16,9 @@
   "bugs": {
     "url": "https://github.com/stephenmathieson/node-uncolor/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "readable-stream": "~1.1.10"
+  },
   "devDependencies": {
     "should": "~1.2.2",
     "mocha": "~1.12.0"
