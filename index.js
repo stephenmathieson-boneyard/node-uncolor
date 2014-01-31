@@ -10,17 +10,17 @@ exports = module.exports = uncolor;
 exports.expr = /\x1B\[\??\d+[mlhABCDEFGK]/g;
 
 /**
- * Remove ANSI escape codes from the given `str`
- * or `Readable` stream.
+ * Remove ANSI escape codes from the given `String`,
+ * or `Buffer`.
  *
  * @api public
- * @param {String|Readable} [str]
+ * @param {String|Buffer} [data]
  * @return {String}
  */
 
-function uncolor(str) {
+function uncolor(data) {
   if (!arguments.length) return transformer();
-  return String(str).replace(exports.expr, '');
+  return String(data).replace(exports.expr, '');
 }
 
 /**

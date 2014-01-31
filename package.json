@@ -1,7 +1,7 @@
 {
   "name": "uncolor",
   "version": "0.2.0",
-  "description": "Remove ANSI escape codes from stringsr",
+  "description": "Remove ANSI escape codes from strings, buffers and streams",
   "license": "MIT",
   "keywords": [
     "ansi",

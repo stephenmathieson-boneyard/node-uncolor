@@ -1,7 +1,7 @@
 
 # uncolor
 
-Remove ANSI escape codes from strings
+  Remove ANSI escape codes from strings, buffers and streams.
 
 ## Installation
 
@@ -9,10 +9,38 @@ Remove ANSI escape codes from strings
 
 ## API
 
+### uncolor(str)
+ 
+  Remove ANSI escape codes from the given `str`.
+
+### uncolor(buf)
+  
+  Remove ANSI escape codes from the given `buf`.
+
+### uncolor()
+
+  Create a `Transform` stream, which removes ANSI escape codes from all data.
+
+
+## Examples
+
+  Uncolor a `String` or `Buffer`:
+
 ```js
 var uncolor = require('uncolor')
 
-uncolor('\x1B[31mhello world\x1B[39m') === 'hello world'
+uncolor('\033[1mhello world\033[00m')
+// => 'hello world'
+```
+
+  Uncolor a `Readable` stream:
+
+```js
+var uncolor = require('uncolor');
+
+var readable = getReadableStream();
+
+readable.pipe(uncolor()).pipe(process.stdout);
 ```
 
 ## CLI Usage (npm install -g uncolor)
