@@ -7,7 +7,7 @@ var Transform = require('stream').Transform
   || require('readable-stream').Transform;
 
 exports = module.exports = uncolor;
-exports.expr = /\x1B\[\??\d+[mlhABCDEFGK]/g;
+exports.expr = /\x1B\[\??\d+(;\d+){0,2}[mlhABCDEFGK]/g;
 
 /**
  * Remove ANSI escape codes from the given `String`,
